@@ -9,6 +9,21 @@ Framework de automatizacion web creado desde cero usando:
 - POM (Page Object Model)
 - Reporte HTML con ExtentReports (Spark)
 
+## Requisitos previos
+
+Para ejecutar este framework de forma estable:
+
+- **JDK:** Java 17
+- **Maven:** **3.9.0 o superior** (recomendado 3.9.6+)
+
+Puedes validar tu version instalada con:
+
+```bash
+mvn -version
+```
+
+> Nota: en este proyecto se uso Maven 3.9.10 en el entorno de desarrollo.
+
 ## Sitio de entrenamiento
 
 Se utiliza la pagina de entrenamiento con login:
