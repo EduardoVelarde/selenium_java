@@ -2,7 +2,7 @@
 
 Framework de automatizacion web creado desde cero usando:
 
-- Java 11+ (compatible, recomendado 17 si esta disponible)
+- Java 17
 - Selenium WebDriver
 - TestNG
 - WebDriverManager
