@@ -22,11 +22,19 @@ public final class DriverFactory {
         String browser = ConfigReader.get("browser");
         boolean headless = Boolean.parseBoolean(ConfigReader.get("headless"));
 
-        WebDriver webDriver = switch (browser == null ? "chrome" : browser.toLowerCase()) {
-            case "firefox" -> createFirefox(headless);
-            case "edge" -> createEdge(headless);
-            default -> createChrome(headless);
-        };
+        String browserToUse = browser == null ? "chrome" : browser.toLowerCase();
+        WebDriver webDriver;
+        switch (browserToUse) {
+            case "firefox":
+                webDriver = createFirefox(headless);
+                break;
+            case "edge":
+                webDriver = createEdge(headless);
+                break;
+            default:
+                webDriver = createChrome(headless);
+                break;
+        }
 
         int implicitWait = ConfigReader.getInt("implicit.wait.seconds", 5);
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(implicitWait));
